@@ -1,0 +1,1 @@
+let curdate = new Date();
