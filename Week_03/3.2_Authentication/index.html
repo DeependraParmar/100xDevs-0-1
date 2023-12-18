@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <button onclick="getAnimalData()">Get Animal Data</button>
+    <div id="json_data"></div>
+    <script>
+        const getAnimalData = async() => {
+            const response = await fetch("https://fakerapi.it/api/v1/persons");
+            const data = await response.json();
+            let div = document.getElementById("json_data");
+            console.log(data.data);
+            for(let i=0; i<data.data.length; i++){
+                div.innerHTML = data.data[i].firstname
+            }
+        }
+    </script>
+</body>
+</html>
