@@ -1,7 +1,7 @@
 // Authentication is the process to authenticate a user to access some routes. In order to prevent anyone to access certain resources of the application, we authenticate them before they access them.
 
 // Dumb way: ask them to send their username and password in all the request in the headers.
-// Pro way: Give user a token on signin/signup and ask them to send it whenever they send another requests in the future. Token will be deleted once they logout. Token is used to ensure the privacy in place of username and the password. BQ8eKZvriLMq03to
+// Pro way: Give user a token on signin/signup and ask them to send it whenever they send another requests in the future. Token will be deleted once they logout. Token is used to ensure the privacy in place of username and the password. 
 
 
 // project: let people signup in the website and after getting authenticated, show them the list of random people.
