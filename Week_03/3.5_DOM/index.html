@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <form action="" id="loginform">
+        First Name: <input type="text" id="firstname"> <br>
+        Last Name: <input type="text" id="lastname"> <br>
+    </form>
+    <button onclick="getInformation()">Try it</button>
+
+    <div>Click the <code>Try it</code> button to get the values of input</div>
+    <span>Your name is: </span>
+    <span style="color: red;" id="displayResult"></span> <br><br>
+    <button onclick="addElement()">Add Element</button> <br><br><br>
+
+    <p>Para01: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab perspiciatis eos delectus debitis voluptatibus porro aliquid ipsa reiciendis. Accusantium, ullam!</p>
+    <p>Para02: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus veniam, enim eius quisquam adipisci a consequuntur ex nam voluptatum?</p>
+    <p>Para03: Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt sapiente error, ipsam suscipit eveniet, ad, aut earum perferendis quod architecto praesentium voluptas maxime omnis totam vel eligendi perspiciatis odio!</p>
+    <button onclick="hideParagraphs()">Turn Paragraphs Red</button>
+
+    <script>
+        const getInformation = () => {
+            let firstname = document.getElementById("firstname").value;
+            let lastname = document.getElementById("lastname").value;
+
+            document.getElementById("displayResult").innerHTML = firstname + " " + lastname;
+        }
+        const addElement = () => {
+            let para = document.createElement("p");
+            para.innerHTML = "I am a paragraph created using DOM Operation";
+            document.body.appendChild(para);
+        }
+        const hideParagraphs = () => {
+            let paragraphs = document.querySelectorAll("p");
+            paragraphs.forEach(para => para.style.color = "red");
+        }
+    </script>
+</body>
+</html>
