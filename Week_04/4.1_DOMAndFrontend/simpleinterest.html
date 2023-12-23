@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <form action="" id="loginform">
+        Principal: <input oninput="calculateInterest()" type="number" name="principal" id="principal"> <br>
+        Rate: <input oninput="calculateInterest()" type="number" name="rate" id="rate"> <br>
+        Time: <input oninput="calculateInterest()" type="number" name="time" id="time"> <br><br>
+    </form>
+    <!-- <button onclick="calculateInterest()">Calculate Interest</button> <br> -->
+    <span>Simple Interest is: </span><span style="color: red;" id="result"></span>
+    <script>
+        const calculateInterest = () => {
+            let principal = document.getElementById("principal").value;
+            let rate = document.getElementById("rate").value;
+            let time = document.getElementById("time").value;
+            document.getElementById("result").innerHTML = (Number(principal) * Number(rate) * Number(time)) / 100;
+        }
+    </script>
+</body>
+</html>

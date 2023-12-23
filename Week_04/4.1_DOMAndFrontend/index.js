@@ -1,0 +1,1 @@
+// DOM is something that is the part of the WEB APIs and the browsers. Nodejs doesn't support the document or has nothing to do with dom.
