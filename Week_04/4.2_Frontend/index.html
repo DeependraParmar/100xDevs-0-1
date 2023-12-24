@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="title" placeholder="Title"><br> <br>
+        <input type="text" id="description" placeholder="Description"><br><br>
+    </form>
+    <button onclick="addTodo()">Add Todo</button> <br>
+    <div id="container">
+
+    </div>
+    <script>
+        const addTodo = () => {
+            let globalId = 1;
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const outerDiv = document.createElement("div");
+            const titleDiv = document.createElement("div");
+            const descriptionDiv = document.createElement("div");
+            const button = document.createElement("button");
+
+            button.setAttribute("onclick",`markAsDone(${id})`)
+
+            titleDiv.innerHTML = title;
+            descriptionDiv.innerHTML = description;
+            button.innerHTML = "Mark As Done <br>";
+
+            outerDiv.appendChild(titleDiv);
+            outerDiv.appendChild(descriptionDiv);
+            outerDiv.appendChild(button);
+            outerDiv.setAttribute("id",globalId);
+            
+            document.getElementById("container").appendChild(outerDiv);
+            globalId++;
+        }
+    </script>
+</body>
+</html>
