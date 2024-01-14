@@ -3,6 +3,7 @@ import UseState from "./UseState"
 import UseEffect from "./UseEffect"
 import UseMemo from "./UseMemo"
 import UseCallback from "./UseCallback"
+import UseRef from "./UseRef"
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
           <Route path="/use-effect" element = {<UseEffect />}  />
           <Route path="/use-memo" element={<UseMemo />} />
           <Route path="/use-callback" element={<UseCallback />} />
+          <Route path="/use-ref" element={<UseRef />} />
         </Routes>
       </Router>
     </>

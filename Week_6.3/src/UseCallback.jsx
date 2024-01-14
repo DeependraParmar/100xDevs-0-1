@@ -39,6 +39,7 @@ const UseMemo = () => {
     return (
         <>
             <CryptoReturnCalculator calculateCryptoReturns={calculateCryptoReturns} />
+            <div>The total tax is: {totalTax}</div>
         </>
     )
 }
