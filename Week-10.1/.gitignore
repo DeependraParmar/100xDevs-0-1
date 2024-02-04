@@ -1,0 +1,4 @@
+*/node_modules
+
+# ignoring the types
+/*.d.ts
