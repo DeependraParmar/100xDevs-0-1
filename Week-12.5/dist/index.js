@@ -33,7 +33,7 @@ function insertData(username, email, password) {
         yield client.connect();
         const result = yield client.query(`
         INSERT INTO users2 (username, email, password) VALUES ($1,$2,$3);
-    `, [username, email, password]);
+    `, [username, email, password]); // prevents you from sql injection.fldf
         console.log(result);
     });
 }
@@ -46,4 +46,6 @@ function getData() {
 }
 // createUsersTable();
 // insertData('deependraparmar1', 'deependraparmar11@gmail.com', 'password');
+// insertData('DELETE * FROM USERS', 'deependraparmar2039@gmail.com', 'hello123');
+// insertData('deependraparmar2034038@gmail.com', 'hello123@gmail.com', 'hekjdjlkdjo85438o');
 getData();
